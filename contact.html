@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register Interest - Kilele Language School</title>
+</head>
+<body>
+
+  <h1>Register Interest</h1>
+  <p>Learn English, French and Portuguese online.</p>
+
+  <form id="f">
+    <input name="name" placeholder="Your name" required>
+
+    <input name="email" type="email" placeholder="Email" required>
+
+    <select name="language">
+      <option>English</option>
+      <option>French</option>
+      <option>Portuguese</option>
+    </select>
+
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    document.getElementById('f').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      fetch('PASTE_WEB_APP_URL', {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(new FormData(e.target))
+      })
+      .then(function() {
+        alert('Thanks! We will be in touch.');
+        e.target.reset();
+      });
+    });
+  </script>
+
+</body>
+</html>
