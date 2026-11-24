@@ -29,7 +29,7 @@
     document.getElementById('f').addEventListener('submit', function(e) {
       e.preventDefault();
 
-      fetch('PASTE_WEB_APP_URL', {
+      fetch('PASTE_WEB_APP_URL', {'https://script.google.com/macros/s/AKfycbweTnWnJINDCZziSzz_NRMrGjBDDj7YiOxMrZXqz5cY3SMsRGOBNUpOKrZL0fHzIeo/exec'
         method: 'POST',
         mode: 'no-cors',
         body: new URLSearchParams(new FormData(e.target))
